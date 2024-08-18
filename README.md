@@ -6,10 +6,11 @@
   3. [Contribution Guidelines](#3-contribution-guidelines)
   4. [Testing the Application](#4-testing-the-application)
   5. [License](#5-license)
-  6. [Questions](#6-questions)
+  6. [Other Sources](#6-other-sources)
+  7. [Questions](#7-questions)
 
   ## 1. Instructions
-  The application requires Node.js with Express 4.16.4 and UUID 8.3.2 dependencies installed.
+  The application requires Node.js with Express 4.16.4 and UUID 8.3.2 dependencies installed to run locally.
 
   ## 2. Description
   The purpose of the application is to allow the user to create, add to, and delete from a list of notes. When the user starts the application, they are taken to a splash screen where they can click "Get Started".
@@ -45,7 +46,10 @@
   MIT</br>
   https://opensource.org/licenses/MIT
 
-  ## 6. Questions:
+  ## 6. Other Sources:
+  Backend helper functions (note-taker/helpers/utils) used from course material to streamline the reading and writing of files for the application.
+
+  ## 7. Questions:
   Contact me with questions at:</br>
     - Github: *jeremydray*</br>
     - Email: *jeremydray@gmail.com*
