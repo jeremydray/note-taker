@@ -1,11 +1,9 @@
 const { readFromFile,
     writeToFile,
     readAndAppend } = require('./helpers/utils')
-const notes = require('./db/db.json')
 const express = require('express');
 const path = require('path');
-const util = require('util');
-const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const PORT = 3001;
@@ -20,8 +18,8 @@ app.get('/notes', (req, res) =>
 );
 
 app.get('/api/notes', (req, res) => {
-    res.json(notes)
-    console.log(`${req.method} request received!`)
+    readFromFile('./db/db.json')
+        .then((data) => res.json(JSON.parse(data)));
 });
 
 app.post('/api/notes', (req, res) => {
@@ -32,6 +30,7 @@ app.post('/api/notes', (req, res) => {
         const newNote = {
             title,
             text,
+            id: uuidv4(),
         }
 
         readAndAppend(newNote, './db/db.json');
