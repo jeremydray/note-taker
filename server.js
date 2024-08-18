@@ -17,7 +17,9 @@ app.use(express.static('public'));// refer to 'public' folder first
 
 //App Specifc Routes
 
-//List the existing or modified list of notes
+//
+
+
 app.get('/notes', (req, res) =>
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
@@ -62,10 +64,13 @@ app.delete('/api/notes/:id', (req, res) => {
         });
 });
 
+
 //Internal testing port
 app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT}`)
 );
 
-
-
+//Catch all for any other requests
+app.get('*', (req, res) =>
+    res.sendFile(path.join(__dirname, 'public/index.html'))
+);
