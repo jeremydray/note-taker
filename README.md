@@ -13,6 +13,9 @@
   The application requires Node.js with Express 4.16.4 and UUID 8.3.2 dependencies installed to run locally.
 
   ## 2. Description
+
+  Link to deployed page: https://note-taker-ro28.onrender.com/
+  
   The purpose of the application is to allow the user to create, add to, and delete from a list of notes. When the user starts the application, they are taken to a splash screen where they can click "Get Started".
   </br>
   </br>
